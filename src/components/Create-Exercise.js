@@ -4,6 +4,10 @@ export default class CreateExercise extends Component {
 	constructor(props) {
 		super(props);
 
+		/**
+		 * Binding to this to avoid experimental 'public class fields syntax'
+		 * https://reactjs.org/docs/handling-events.html
+		 */
 		this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeDuration = this.onChangeDuration.bind(this);
@@ -17,6 +21,13 @@ export default class CreateExercise extends Component {
 			date: new Date(),
 			users: []
 		}
+	}
+
+	componentDidMount() {
+		this.setState({
+			users: ['test user'],
+			username: 'test user'
+		})
 	}
 
 	onChangeUsername(e) {
