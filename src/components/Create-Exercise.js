@@ -72,8 +72,8 @@ export default class CreateExercise extends Component {
 	}
 
 	render() {
-		return (
-		<div>
+    return (
+    <div>
       <h3>Create New Exercise Log</h3>
       <form onSubmit={this.onSubmit}>
         <div className="form-group">
@@ -93,7 +93,6 @@ export default class CreateExercise extends Component {
               }
           </select>
         </div>
-
         <div className="form-group">
           <label>Description: </label>
           <input  type="text"
@@ -103,7 +102,6 @@ export default class CreateExercise extends Component {
               onChange={this.onChangeDescription}
               />
         </div>
-
         <div className="form-group">
           <label>Duration (in minutes): </label>
           <input
@@ -113,7 +111,6 @@ export default class CreateExercise extends Component {
               onChange={this.onChangeDuration}
               />
         </div>
-
         <div className="form-group">
           <label>Date: </label>
           <div>
@@ -129,6 +126,6 @@ export default class CreateExercise extends Component {
         </div>
       </form>
     </div>
-		)
-	}
+    )
+  }
 }
